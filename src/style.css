@@ -1,0 +1,168 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Prompt', sans-serif;    
+    width: 100%;
+    height: 100vh;
+    background: url(./img/bg.jpg) no-repeat;
+    background-size: cover;
+    overflow: hidden;
+    color: #fff;;
+}
+
+.container {
+    width: 700px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #008eff80;
+    border-radius: 30px;
+    padding: 20px;
+}
+
+.city-time {
+    display: flex;
+    width: 100%;
+    align-items: center;
+}
+
+.time {
+    width: 59%;
+    align-self: flex-start;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.time > p {
+    margin: 0;
+}
+
+.city {
+    width: 41%;
+    align-self: flex-start;
+    display: flex;
+}
+
+.city-content {
+    display: flex;
+    align-items: center;
+}
+
+.city-img {
+    width: 20px;
+    height: 20px;
+}
+
+.city-name {
+    font-size: 25px;
+    margin: 0;
+    padding-left: 10px;
+}
+
+.today {
+    display: flex;
+    width: 100%;
+    font-weight: 500;
+}
+
+.today-icon-degree {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.today-icon {
+    width: 180px;
+    height: 180px;
+}
+
+.degree {
+    display: flex;
+}
+
+.degree > p {
+    margin: 0 90px 0 0;
+    display: flex;
+}
+
+.degree span {
+    font-size: 60px;
+    line-height: 60px;
+}
+
+.parameters {
+    margin: 20px 0;
+}
+
+.parameters p {
+    margin: 0;  
+}
+
+.feels-like sup {
+    font-size: xx-small;
+}
+
+.chart {
+    width: 100%;
+    height: 150px;
+    background-color: #ffffff90;
+    border-radius: 30px;
+}
+
+.chart > div {
+    width: 660px;
+    height: 150px;
+}
+
+.title {
+    font-weight: 500;
+    font-size: 18px;
+}
+
+.next-days {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.next-day {
+    width: 23%;
+    background-color: #008eff42;
+    border-radius: 30px;
+    text-align: center;
+}
+
+.weekday {
+    margin-bottom: 0;
+    text-transform: uppercase;
+}
+
+.img-day {
+    width: 80px;
+    height: 80px;
+}
+
+.degree-day {
+    display: flex;
+    justify-content: center;
+}
+
+.degree-day > p {
+    margin: 0;
+    font-size: 20px;
+}
+
+.degree-night {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 16px;
+}
+
+.degree-night > p {
+    margin: 0;
+    opacity: 0.7;
+}
