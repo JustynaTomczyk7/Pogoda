@@ -1,15 +1,38 @@
-# 🚀 Welcome to your new awesome project!
+# 🌤️ Pogoda - weather application
 
-This project has been created using **webpack-cli**, you can now run
+## Table of contents
+
+- [General info](#general-info)
+- [Technologies](#technologies)
+- [Installation](#installation)
+
+## General info
+
+This project is a weather application that reads our location and downloads the weather for this location.
+
+To play the location I used the Geolocation API, and to read the weather I used the OpenWeather API. Thanks to this API I got the current weather and forecast for the next 4 days.
+
+The aim of this project was to gain practical skills in writing in JavaScript and using the API.
+
+![Weather Image](/src/img/pogoda-img.png)
+
+## Technologies
+
+Project is created with:
+
+- JavaScript
+- Fetch API
+- OpenWeather API
+- Geolocation API
+- HTML
+- CSS
+- Webpack
+
+## Installation
+
+To run this project, install it locally using npm:
 
 ```
-npm run build
+npm install
+npm run serve
 ```
-
-or
-
-```
-yarn build
-```
-
-to bundle your application

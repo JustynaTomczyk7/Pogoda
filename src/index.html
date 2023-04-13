@@ -1,76 +1,106 @@
 <!DOCTYPE html>
 <html lang="pl">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Pogoda</title>
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
     <script src="https://www.gstatic.com/charts/loader.js"></script>
-</head>
-<body>
+  </head>
+  <body>
     <div class="container">
-        <div class="city-time">
-            <div class="time">
-                <p id="date"></p>
-                <p id="time"></p>
-            </div>
-            <div class="city">
-                <div class="city-content">
-                    <img class="city-img" src="<%= require('./img/pin-white.png') %>" alt="location">
-                    <p class="city-name" id="city-name"></p>
-                </div>
-            </div>
+      <div class="city-time">
+        <div class="time">
+          <p id="date"></p>
+          <p id="time"></p>
         </div>
+        <div class="city">
+          <div class="city-content">
+            <img
+              class="city-img"
+              src="<%= require('./img/pin-white.png') %>"
+              alt="location"
+            />
+            <p class="city-name" id="city-name"></p>
+          </div>
+        </div>
+      </div>
 
-        <div class="today">
-            <div class="today-icon-degree">
-                <img class="today-icon" id="today-icon" src="" alt="icon">
-                <div class="degree"><p><span id="degree-today"></span><sup><sup>o</sup>C</sup></p></div>
-                <div class="parameters">
-                    <p class="feels-like">Odczuwalna temperatura: <span id="feels-like"></span><sup><sup>o</sup>C</sup></p>
-                    <p>Zachmurzenie: <span id="clouds"></span>%</p>
-                    <p>Wilgotność: <span id="humidity"></span>%</p>
-                    <p>Wiatr: <span id="wind"></span> km/h</p>
-                </div>
-            </div>
+      <div class="today">
+        <div class="today-icon-degree">
+          <img class="today-icon" id="today-icon" src="" alt="icon" />
+          <div class="degree">
+            <p>
+              <span id="degree-today"></span><sup><sup>o</sup>C</sup>
+            </p>
+          </div>
+          <div class="parameters">
+            <p class="feels-like">
+              Odczuwalna temperatura: <span id="feels-like"></span
+              ><sup><sup>o</sup>C</sup>
+            </p>
+            <p>Zachmurzenie: <span id="clouds"></span>%</p>
+            <p>Wilgotność: <span id="humidity"></span>%</p>
+            <p>Wiatr: <span id="wind"></span> km/h</p>
+          </div>
         </div>
-        <div class="chart">
-            <div id="myChart"></div>
-        </div>
+      </div>
+      <div class="chart">
+        <div id="myChart"></div>
+      </div>
 
-        <div>
-            <p class="title">Pogoda na najbliższe dni</p>
-            <div class="next-days">
-                <div class="next-day">
-                    <p class="weekday" id="weekday1"></p>
-                    <img class="img-day" id="img-day1" src="" alt="icon">
-                    <div class="degree-day"><p><span id="degree-day1"></span><sup>o</sup>C</p></div>
-                    <div class="degree-night"><p><span id="degree-night1"></span><sup>o</sup>C</p></div>
-                </div>
-                <div class="next-day">
-                    <p class="weekday" id="weekday2"></p>
-                    <img class="img-day" id="img-day2" src="" alt="icon">
-                    <div class="degree-day"><p><span id="degree-day2"></span><sup>o</sup>C</p></div>
-                    <div class="degree-night"><p><span id="degree-night2"></span><sup>o</sup>C</p></div>
-                </div>
-                <div class="next-day">
-                    <p class="weekday" id="weekday3"></p>
-                    <img class="img-day" id="img-day3" src="" alt="icon">
-                    <div class="degree-day"><p><span id="degree-day3"></span><sup>o</sup>C</p></div>
-                    <div class="degree-night"><p><span id="degree-night3"></span><sup>o</sup>C</p></div>
-                </div>
-                <div class="next-day">
-                    <p class="weekday" id="weekday4"></p>
-                    <img class="img-day" id="img-day4" src="" alt="icon">
-                    <div class="degree-day"><p><span id="degree-day4"></span><sup>o</sup>C</p></div>
-                    <div class="degree-night"><p><span id="degree-night4"></span><sup>o</sup>C</p></div>
-                </div>
+      <div>
+        <p class="title">Pogoda na najbliższe dni</p>
+        <div class="next-days">
+          <div class="next-day">
+            <p class="weekday" id="weekday1"></p>
+            <img class="img-day" id="img-day1" src="" alt="icon" />
+            <div class="degree-day">
+              <p><span id="degree-day1"></span><sup>o</sup>C</p>
             </div>
+            <div class="degree-night">
+              <p><span id="degree-night1"></span><sup>o</sup>C</p>
+            </div>
+          </div>
+          <div class="next-day">
+            <p class="weekday" id="weekday2"></p>
+            <img class="img-day" id="img-day2" src="" alt="icon" />
+            <div class="degree-day">
+              <p><span id="degree-day2"></span><sup>o</sup>C</p>
+            </div>
+            <div class="degree-night">
+              <p><span id="degree-night2"></span><sup>o</sup>C</p>
+            </div>
+          </div>
+          <div class="next-day">
+            <p class="weekday" id="weekday3"></p>
+            <img class="img-day" id="img-day3" src="" alt="icon" />
+            <div class="degree-day">
+              <p><span id="degree-day3"></span><sup>o</sup>C</p>
+            </div>
+            <div class="degree-night">
+              <p><span id="degree-night3"></span><sup>o</sup>C</p>
+            </div>
+          </div>
+          <div class="next-day">
+            <p class="weekday" id="weekday4"></p>
+            <img class="img-day" id="img-day4" src="" alt="icon" />
+            <div class="degree-day">
+              <p><span id="degree-day4"></span><sup>o</sup>C</p>
+            </div>
+            <div class="degree-night">
+              <p><span id="degree-night4"></span><sup>o</sup>C</p>
+            </div>
+          </div>
         </div>
-    </div> 
-</body>
+      </div>
+    </div>
+  </body>
 </html>
